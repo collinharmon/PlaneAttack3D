@@ -117,13 +117,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="whosinbunker.Plugins.csproj">
-      <Project>{CDA4E36A-ADEF-C3EA-B26D-6E7E6D1D5005}</Project>
-      <Name>whosinbunker.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="whosinbunker.csproj">
       <Project>{AB269508-350F-32E8-AA1C-025945355A11}</Project>
       <Name>whosinbunker</Name>
+    </ProjectReference>
+    <ProjectReference Include="whosinbunker.Plugins.csproj">
+      <Project>{CDA4E36A-ADEF-C3EA-B26D-6E7E6D1D5005}</Project>
+      <Name>whosinbunker.Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +137,7 @@
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\sky5X\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

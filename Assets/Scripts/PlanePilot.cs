@@ -31,9 +31,13 @@ public class PlanePilot : MonoBehaviour {
 		if(terrainHeightWhereWeAre > transform.position.y){
 			transform.position = new Vector3(transform.position.x,terrainHeightWhereWeAre,transform.position.z);
 		}
-		if (Input.GetKey("z"))
+		if (Input.GetKey("z") && Time.time > fireRate + lastShot)
 		{
-			Instantiate(Bomb, transform.position, Quaternion.identity);
+			GameObject bomb = Instantiate(Bomb, transform.position, Quaternion.identity) as GameObject;
+			
+			lastShot = Time.time;
+			Rigidbody bombRigidbody = bomb.GetComponent<Rigidbody>();
+			bombRigidbody.velocity += transform.forward*27;
 		   //if(Time.time > fireRate + lastShot)
 			//{
 				//Vector3 fuck = new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z);
